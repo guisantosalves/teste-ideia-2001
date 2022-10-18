@@ -1,0 +1,169 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --black: #444242;
+    --white: #FFFFFF;
+    --yellow: #FA9401;
+    --iphone: #FFB64E;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--black);
+    height: 10vh;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.containerLang {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--white);
+    border-radius: 999px;
+    padding: 5px;
+}
+
+.itemContainerLang {
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.containerBody{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--black);
+    height: 80vh;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ideialogoSub {
+    color: var(--white);
+    letter-spacing: 0cm;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.containerLogoFrase {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttonsOptions {
+    display: flex;
+    flex-direction: column;
+    margin-top: 53px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 48px;
+    border-radius: 50px;
+    border: 1px solid var(--yellow);
+    color: var(--white);
+    background-color: var(--black);
+    margin-bottom: 15px;
+}
+
+.button:hover {
+    background-color: var(--yellow);
+}
+
+.button > h3 {
+    margin-left: 10px;
+    font-weight: 600;
+}
+
+.joinButton > a {
+    text-decoration: none;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    background-color: var(--black);
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 999px;
+    background-color: var(--white);
+    padding: 5px;
+    margin-right: 12px;
+}
+
+/* media queries */
+
+@media (max-height: 360px) {
+    .buttonsOptions {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .button {
+        margin-right: 10px;
+        width: 265px;
+        height: 50px;
+    }
+
+    .button > h3 {
+        font-size: small;
+    }
+    
+    .footer {
+        display: none;
+    }
+
+    .containerBody {
+        height: 90vh;
+    }
+
+    .header{
+        padding-top: 10px;
+    }
+}
+
+@media (max-width: 320px) {
+    .header {
+        background-color: var(--iphone);
+    }
+
+    .containerBody {
+        background-color: var(--iphone);
+    }
+
+    .button {
+        border: 2px solid var(--white);;
+    }
+
+    .button:hover {
+        background-color: var(--yellow);
+        border: 2px solid var(--black);
+    }
+
+    .footer {
+        background-color: var(--iphone);
+    }
+}
